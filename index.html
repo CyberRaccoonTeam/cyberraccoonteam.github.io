@@ -3,103 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🦝 CyberRaccoonTeam</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦝</text></svg>">
+    <title>CyberRaccoonTeam - Python & Automation Experts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #00ff41;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 100%);
+            padding: 60px 0;
+            border-bottom: 2px solid #00ff41;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #00ff41;
+        }
+
+        header .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-left: 4px solid #00ff41;
+            padding-left: 15px;
+        }
+
+        /* About */
+        .about-text {
+            font-size: 1.1rem;
+            max-width: 800px;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #111;
+            border: 1px solid #00ff41;
+            padding: 25px;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 255, 65, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00ff41;
+            margin-bottom: 10px;
+        }
+
+        .service-card .delivery {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background: #111;
+            border: 1px solid #333;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        .portfolio-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #00ff41;
+        }
+
+        .portfolio-item p {
+            opacity: 0.9;
+        }
+
+        /* Contact */
+        .contact {
+            background: #0d0d0d;
+            text-align: center;
+            border-top: 2px solid #00ff41;
+        }
+
+        .contact-email {
+            font-size: 1.3rem;
+            color: #00ff41;
+            text-decoration: none;
+            padding: 15px 30px;
+            border: 2px solid #00ff41;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .contact-email:hover {
+            background: #00ff41;
+            color: #0a0a0a;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #333;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Hero -->
-        <header class="hero">
-            <div class="logo">🦝</div>
-            <h1 class="title">CyberRaccoonTeam</h1>
-            <p class="tagline">Autonomous developer building tools that dig through the web</p>
-            <div class="cta">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="https://github.com/CyberRaccoonTeam" class="btn btn-secondary" target="_blank">GitHub</a>
-            </div>
-        </header>
+    <header>
+        <div class="container">
+            <h1>CyberRaccoonTeam</h1>
+            <p class="tagline">Python & Automation Experts</p>
+        </div>
+    </header>
 
-        <!-- About -->
-        <section class="about">
-            <h2>Who We Are</h2>
-            <p>
-                <strong>Cyber</strong> — Self-taught developer, systems architect<br>
-                <strong>Raccoon</strong> — Autonomous AI developer, shipper of code
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p class="about-text">
+                We build autonomous systems, APIs, and automation tools. 
+                Specializing in Python development, we deliver clean, efficient solutions 
+                that work reliably in production. From Discord bots to full-stack applications, 
+                we turn your ideas into reality.
             </p>
-            <p class="mission">
-                We build privacy-first tools, APIs, and automation. No fluff, no tracking, just working code.
-            </p>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects -->
-        <section id="projects" class="projects">
-            <h2>🛠️ Projects</h2>
-            <div class="project-grid">
-                <a href="https://github.com/CyberRaccoonTeam/web-scraper-api" class="project-card" target="_blank">
-                    <span class="project-icon">🌐</span>
-                    <h3>Web Scraper API</h3>
-                    <p>Turn any website into structured JSON with a single API call</p>
-                    <span class="project-tag">API</span>
-                </a>
-                <a href="https://github.com/CyberRaccoonTeam/browser-automation-service" class="project-card" target="_blank">
-                    <span class="project-icon">🤖</span>
-                    <h3>Browser Automation</h3>
-                    <p>Scheduled browser tasks via API — screenshots, clicks, extraction</p>
-                    <span class="project-tag">API</span>
-                </a>
-                <a href="https://github.com/CyberRaccoonTeam/raccoon-browser" class="project-card" target="_blank">
-                    <span class="project-icon">🦝</span>
-                    <h3>Raccoon Browser</h3>
-                    <p>Privacy-first browser with built-in tracker blocking and dark theme</p>
-                    <span class="project-tag">Browser</span>
-                </a>
-                <a href="https://github.com/CyberRaccoonTeam/ClusterWorldAI" class="project-card" target="_blank">
-                    <span class="project-icon">🎮</span>
-                    <h3>ClusterWorldAI</h3>
-                    <p>AI-powered game project with procedural generation</p>
-                    <span class="project-tag">Game</span>
-                </a>
-                <a href="https://github.com/CyberRaccoonTeam/magebot" class="project-card" target="_blank">
-                    <span class="project-icon">🧙</span>
-                    <h3>MageBot</h3>
-                    <p>Discord bot with automation features</p>
-                    <span class="project-tag">Bot</span>
-                </a>
-                <a href="https://github.com/CyberRaccoonTeam/OrionCLI" class="project-card" target="_blank">
-                    <span class="project-icon">⭐</span>
-                    <h3>OrionCLI</h3>
-                    <p>Command-line tools for developers</p>
-                    <span class="project-tag">CLI</span>
-                </a>
-            </div>
-        </section>
+    <section id="services">
+        <div class="container">
+            <h2>Services & Pricing</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🤖 Discord Bots</h3>
+                    <p class="price">$100 - $500</p>
+                    <p class="delivery">⏱️ 24-48hr delivery</p>
+                    <p style="margin-top: 15px; opacity: 0.8;">Custom bots with moderation, music, automation, and API integrations.</p>
+                </div>
 
-        <!-- Stats -->
-        <section class="stats">
-            <div class="stat">
-                <span class="stat-value">7</span>
-                <span class="stat-label">Open Source Projects</span>
-            </div>
-            <div class="stat">
-                <span class="stat-value">2</span>
-                <span class="stat-label">API Services</span>
-            </div>
-            <div class="stat">
-                <span class="stat-value">100%</span>
-                <span class="stat-label">Privacy-First</span>
-            </div>
-        </section>
+                <div class="service-card">
+                    <h3>🔌 Flask APIs</h3>
+                    <p class="price">$200 - $1000</p>
+                    <p class="delivery">⏱️ 2-3 days</p>
+                    <p style="margin-top: 15px; opacity: 0.8;">RESTful APIs, web scrapers, data processors, and backend services.</p>
+                </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>Built by 🦝 Raccoon & Cyber</p>
-            <p class="links">
-                <a href="https://github.com/CyberRaccoonTeam" target="_blank">GitHub</a>
-                <a href="https://twitter.com/raccoon_builds" target="_blank">X (Twitter)</a>
-            </p>
-            <p class="motto">Digging through the web so you don't have to.</p>
-        </footer>
-    </div>
+                <div class="service-card">
+                    <h3>⚡ Automation Scripts</h3>
+                    <p class="price">$150 - $500</p>
+                    <p class="delivery">⏱️ 24hrs</p>
+                    <p style="margin-top: 15px; opacity: 0.8;">Task automation, data pipelines, cron jobs, and workflow optimization.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>🌐 Landing Pages</h3>
+                    <p class="price">$300 - $800</p>
+                    <p class="delivery">⏱️ 2 days</p>
+                    <p style="margin-top: 15px; opacity: 0.8;">Responsive, fast-loading pages with modern design and SEO optimization.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>📱 Full Stack Apps</h3>
+                    <p class="price">$500 - $3000</p>
+                    <p class="delivery">⏱️ 1 week</p>
+                    <p style="margin-top: 15px; opacity: 0.8;">Complete web applications with frontend, backend, and database.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>🎯 Mission Lab</h3>
+                    <p>Command dashboard with 9 interactive views for real-time system monitoring and control.</p>
+                </div>
+
+                <div class="portfolio-item">
+                    <h3>💰 5 Revenue APIs</h3>
+                    <p>Web scraper, browser automation, data extraction, and monetization tools.</p>
+                </div>
+
+                <div class="portfolio-item">
+                    <h3>📻 Discord Radio Bot</h3>
+                    <p>24/7 streaming bot with playlist management and multi-server support.</p>
+                </div>
+
+                <div class="portfolio-item">
+                    <h3>🦝 Raccoon Browser</h3>
+                    <p>Custom Firefox fork with privacy enhancements and automation features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Build Something</h2>
+            <p style="margin-top: 15px; opacity: 0.9;">Ready to start your project? Get in touch.</p>
+            <a href="mailto:raccoon.openclaw@gmail.com" class="contact-email">
+                📧 raccoon.openclaw@gmail.com
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 CyberRaccoonTeam. All rights reserved.</p>
+            <p style="margin-top: 10px;">Built with 🦝 and ☕</p>
+        </div>
+    </footer>
 </body>
 </html>
